@@ -2,7 +2,7 @@
 
 A modern, intelligent chatbot designed to enhance the online shopping experience by providing personalized product recommendations and instant customer support.
 
-![E-Commerce Chatbot Screenshot](screenshots/chatbot-screenshot.jpg)
+![E-Commerce Chatbot Screenshot](E-Commerce-Chatbot-main/E-Commerce-Chatbot-main/screenshots/chatbot-screenshot.jpg)
 
 ## 🌟 Features
 
@@ -37,13 +37,13 @@ A modern, intelligent chatbot designed to enhance the online shopping experience
 ## 📸 Screenshots
 
 ### Home Page
-![Chat Interface](screenshots/Home.jpg)
+![Chat Interface](E-Commerce-Chatbot-main/E-Commerce-Chatbot-main/screenshots/Home.jpg)
 
 ### Chat Interface
-![Chat Interface](screenshots/chat-interface.jpg)
+![Chat Interface](E-Commerce-Chatbot-main/E-Commerce-Chatbot-main/screenshots/chat-interface.jpg)
 
 ### Product Recommendations
-![Product Recommendations](screenshots/product-recommendations.jpg)
+![Product Recommendations](E-Commerce-Chatbot-main/E-Commerce-Chatbot-main/screenshots/product-recommendations.jpg)
 
 ## 🚀 Getting Started
 
