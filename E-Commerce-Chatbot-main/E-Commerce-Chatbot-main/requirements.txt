@@ -1,0 +1,9 @@
+langchain-astradb==0.0.3
+langchain==0.1.0
+langchain-google-genai==0.0.5
+datasets==2.15.0
+pypdf==3.17.1
+python-dotenv==1.0.0
+flask==3.0.0
+
+-e .

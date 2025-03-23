@@ -1,0 +1,356 @@
+/* Main Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+/* E-commerce Background Elements */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.1) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.1) 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    z-index: -1;
+}
+
+/* Chat Button */
+.chat-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #1a237e; /* Midnight Blue */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.chat-button:hover {
+    transform: scale(1.1);
+    background: #283593; /* Darker Midnight Blue */
+}
+
+.chat-button i {
+    color: white;
+    font-size: 24px;
+}
+
+.chat-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #ff4444;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Chat Window */
+.chat-window {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 350px;
+    height: 500px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+    display: none;
+    flex-direction: column;
+    z-index: 999;
+    overflow: hidden;
+}
+
+.chat-window.show {
+    display: flex;
+}
+
+/* Chat Header */
+.chat-header {
+    background: #1a237e; /* Midnight Blue */
+    padding: 15px;
+    color: white;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.chat-header .user_info {
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header .user_info span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.chat-header .user_info p {
+    font-size: 12px;
+    opacity: 0.8;
+    margin: 0;
+}
+
+.close-chat {
+    margin-left: auto;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.close-chat i {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+/* Chat Body */
+.chat-body {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #f8f9fa;
+}
+
+/* Chat Footer */
+.chat-footer {
+    padding: 15px;
+    background: white;
+    border-top: 1px solid #eee;
+    display: flex;
+    align-items: center;
+}
+
+/* Message Styles */
+.msg_cotainer {
+    background: #e3f2fd; /* Light Blue */
+    border-radius: 15px;
+    padding: 10px 15px;
+    max-width: 80%;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.msg_cotainer_send {
+    background: #1a237e; /* Midnight Blue */
+    color: white;
+    border-radius: 15px;
+    padding: 10px 15px;
+    max-width: 80%;
+    position: relative;
+    margin-bottom: 20px;
+    margin-left: auto;
+}
+
+.msg_time {
+    font-size: 10px;
+    color: #6c757d;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+}
+
+.msg_time_send {
+    font-size: 10px;
+    color: rgba(255,255,255,0.8);
+    position: absolute;
+    bottom: -15px;
+    right: 0;
+}
+
+/* Input Styles */
+.type_msg {
+    border: 1px solid #dee2e6;
+    border-radius: 20px;
+    padding: 10px 15px;
+    margin-right: 10px;
+    flex: 1;
+    font-size: 14px;
+}
+
+.send_btn {
+    background: #1a237e; /* Midnight Blue */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.send_btn:hover {
+    background: #283593; /* Darker Midnight Blue */
+}
+
+/* User Images */
+.user_img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-right: 10px;
+}
+
+.user_img_msg {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.online_icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    background: #1a237e; /* Midnight Blue */
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1a237e; /* Midnight Blue */
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #283593; /* Darker Midnight Blue */
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    .chat-window {
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        right: 0;
+        border-radius: 0;
+    }
+
+    .chat-header {
+        border-radius: 0;
+    }
+
+    .chat-button {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .chat-button i {
+        font-size: 20px;
+    }
+
+    .msg_cotainer,
+    .msg_cotainer_send {
+        max-width: 85%;
+    }
+
+    .type_msg {
+        font-size: 16px; /* Better for mobile typing */
+        padding: 12px 15px;
+    }
+
+    .send_btn {
+        padding: 12px 20px;
+    }
+
+    .chat-body {
+        padding: 15px;
+    }
+
+    .chat-footer {
+        padding: 10px 15px;
+    }
+}
+
+/* Small Mobile Devices */
+@media screen and (max-width: 480px) {
+    .chat-header .user_info span {
+        font-size: 16px;
+    }
+
+    .chat-header .user_info p {
+        font-size: 11px;
+    }
+
+    .msg_cotainer,
+    .msg_cotainer_send {
+        max-width: 90%;
+        padding: 8px 12px;
+    }
+
+    .type_msg {
+        padding: 10px 12px;
+    }
+
+    .send_btn {
+        padding: 10px 15px;
+    }
+
+    .chat-button {
+        bottom: 15px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+    }
+
+    .chat-button i {
+        font-size: 18px;
+    }
+}
+
+/* Landscape Mode */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .chat-window {
+        height: 100vh;
+    }
+
+    .chat-body {
+        padding: 10px;
+    }
+
+    .msg_cotainer,
+    .msg_cotainer_send {
+        margin-bottom: 15px;
+    }
+
+    .chat-footer {
+        padding: 8px 15px;
+    }
+} 
